@@ -1,4 +1,4 @@
-# This is ehcoit's per-user configuration file.
+# https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/managing-commit-signature-verification
 [user]
   name = Michael Russo
 	email = russo.mail@gmail.com
