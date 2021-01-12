@@ -1,2 +1,3 @@
 # dotfiles
-russomi dotfiles
+
+zsh config and dotfiles
