@@ -1,0 +1,47 @@
+# This is ehcoit's per-user configuration file.
+[user]
+  name = Michael Russo
+	email = russo.mail@gmail.com
+	signingkey = 85ECB1723C11606883950F1956D4C9F2833F1BB8
+
+[core]
+	editor = code --wait
+	excludesfile = ~/.gitignore
+
+[commit]
+  template = ~/.gitmessage
+  gpgsign = true
+
+[alias]
+  co = checkout
+  ec = config --global -e
+  up = !git pull --rebase --prune $@ && git submodule update --init --recursive
+  cob = checkout -b
+  cm = !git add -A && git commit -m
+  save = !git add -A && git commit -m 'SAVEPOINT'
+  wip = !git add -u && git commit -m "WIP"
+  undo = reset HEAD~1 --mixed
+  amend = commit -a --amend
+  wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
+  bclean = "!f() { DEFAULT=$(git default); git branch --merged ${1-$DEFAULT} | grep -v " ${1-$DEFAULT}$" | xargs git branch -d; }; f"
+  bdone = "!f() { DEFAULT=$(git default); git checkout ${1-$DEFAULT} && git up && git bclean ${1-$DEFAULT}; }; f"
+  migrate = "!f(){ DEFAULT=$(git default); CURRENT=$(git symbolic-ref --short HEAD); git checkout -b $1 && git branch --force $CURRENT ${3-$CURRENT@{u}} && git rebase --onto ${2-$DEFAULT} $CURRENT; }; f"
+  open = "!f() { REPO_URL=$(git config remote.origin.url); open ${REPO_URL%%.git}; }; f"
+  browse = !git open
+  caa = commit -a --amend -C HEAD
+  ls = log --oneline
+  remotes = remote -v
+  add-upstream = "remote add upstream"
+  fetchup = "fetch upstream"
+  branches = "branch -v -r --list"
+[url "ssh://git@github.com/"]
+	InsteadOf = https://github.com/
+
+# https://code.visualstudio.com/docs/editor/versioncontrol
+# https://code.visualstudio.com/docs/editor/portable
+[diff]
+    tool = default-difftool
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+[init]
+	defaultBranch = main
