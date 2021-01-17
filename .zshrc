@@ -105,7 +105,22 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 #plugins=(git aws kube-ps1 docker)
-plugins=(git aws kube-ps1 docker colored-man-pages colorize pip python brew osx zsh_reload poetry)
+plugins=(
+    git
+    aws
+    zsh-autosuggestions
+    helm minikube
+    kube-ps1
+    docker
+    colored-man-pages
+    colorize
+    pip
+    python
+    brew
+    osx
+    zsh_reload
+    poetry
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -197,5 +212,5 @@ autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="/Users/hpe_mrusso/.sdkman"
+[[ -s "/Users/hpe_mrusso/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/hpe_mrusso/.sdkman/bin/sdkman-init.sh"
