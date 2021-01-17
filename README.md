@@ -31,6 +31,7 @@ brew install kubernetes-cli
 brew install jq
 brew install awscli
 brew install eksctl
+brew install gh
 brew install --cask visual-studio-code
 brew install --cask cheatsheet
 brew install --cask cinch
