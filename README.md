@@ -27,11 +27,16 @@ brew install wget
 brew install yq
 brew install zsh
 brew install zsh-completions
-brew install kubernetes-cli
 brew install jq
 brew install awscli
 brew install eksctl
 brew install gh
+brew install kubectl
+brew install aws-iam-authenticator
+brew install aws-sam-cli
+brew install cfn-lint
+brew install protobuf
+brew install hugo
 brew install --cask visual-studio-code
 brew install --cask cheatsheet
 brew install --cask cinch
@@ -49,9 +54,17 @@ brew install --cask microsoft-teams
 brew install --cask itsycal
 ```
 
+## Python packages
+
+``` bash
+# https://pypi.org/project/aws2-wrap/
+pip install aws2-wrap
+```
+
 ## Resources
 
 - [How to Set Up Your MacBook for Web Development in 2020](https://medium.com/better-programming/setting-up-your-mac-for-web-development-in-2020-659f5588b883#589f)
 - [dotfiles](https://dotfiles.github.io/)
 - [awesome-dotfiles](https://github.com/webpro/awesome-dotfiles)
-- [Managing commit signature verification](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/managing-commit-signature-verification)
+- [Connecting to GitHub with SSH](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
+- [Managing commit signature verification](https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification)
