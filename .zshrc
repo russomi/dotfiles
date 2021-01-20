@@ -207,11 +207,12 @@ export PATH="$HOME/.poetry/bin:$PATH"
 # GOPATH
 export PATH="$HOME/go/bin:$PATH"
 
+# GPG pin entry
+export GPG_TTY=$(tty)
+
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/hpe_mrusso/.sdkman"
 [[ -s "/Users/hpe_mrusso/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/hpe_mrusso/.sdkman/bin/sdkman-init.sh"
-
-export GPG_TTY=$(tty)
