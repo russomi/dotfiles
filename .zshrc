@@ -208,6 +208,7 @@ export PATH="$HOME/.poetry/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 
 # GPG pin entry
+# see here: https://docs.github.com/en/github/authenticating-to-github/telling-git-about-your-signing-key
 export GPG_TTY=$(tty)
 
 autoload -U +X bashcompinit && bashcompinit
