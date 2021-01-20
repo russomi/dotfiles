@@ -19,6 +19,7 @@ brew install aws-sam-cli
 brew install cfn-lint
 brew install protobuf
 brew install hugo
+brew install gnupg
 brew install --cask visual-studio-code
 brew install --cask cheatsheet
 brew install --cask cinch
@@ -29,7 +30,7 @@ brew install --cask google-chrome
 brew install --cask caffeine
 brew install --cask sizeup
 brew install --cask slack
-brew install --cask snagit
+# brew install --cask snagit
 brew install --cask iterm2
 brew install --cask zoom
 brew install --cask microsoft-teams

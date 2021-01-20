@@ -119,7 +119,6 @@ plugins=(
     brew
     osx
     zsh_reload
-    poetry
 )
 
 source $ZSH/oh-my-zsh.sh
