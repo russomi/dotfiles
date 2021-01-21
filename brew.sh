@@ -35,3 +35,4 @@ brew install --cask iterm2
 brew install --cask zoom
 brew install --cask microsoft-teams
 brew install --cask itsycal
+brew install --cask gpg-suite-no-mail
