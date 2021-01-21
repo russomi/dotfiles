@@ -209,7 +209,8 @@ export PATH="$HOME/go/bin:$PATH"
 
 # GPG pin entry
 # see here: https://docs.github.com/en/github/authenticating-to-github/telling-git-about-your-signing-key
-export GPG_TTY=$(tty)
+# and also here: https://unix.stackexchange.com/a/608921
+export GPG_TTY=$TTY
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
