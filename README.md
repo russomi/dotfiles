@@ -56,3 +56,4 @@ pip install aws2-wrap
 - [awesome-dotfiles](https://github.com/webpro/awesome-dotfiles)
 - [Connecting to GitHub with SSH](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
 - [Managing commit signature verification](https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification)
+- [GPG and git on macOS](https://gist.github.com/russomi/31117ffadd76419a5a140dce095eab9e)
