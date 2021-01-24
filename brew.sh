@@ -20,6 +20,9 @@ brew install cfn-lint
 brew install protobuf
 brew install hugo
 brew install gnupg
+brew install minikube
+brew install pygments
+brew install --cask virtualbox
 brew install --cask visual-studio-code
 brew install --cask cheatsheet
 brew install --cask cinch
