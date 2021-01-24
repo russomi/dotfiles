@@ -109,7 +109,8 @@ plugins=(
     git
     aws
     zsh-autosuggestions
-    helm minikube
+    helm
+    minikube
     kube-ps1
     docker
     colored-man-pages
