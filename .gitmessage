@@ -1,8 +1,6 @@
-# [XXX-####] Explain what you are doing in this commit
+# Subject line (try to keep under 50 characters)
 #
-# Why:
-# - This and that 
+# Multi-line description of commit,
+# feel free to be detailed.
 #
-# This change addresses the need by:
-# - This and this and this 
-#
+# [Ticket: X]
