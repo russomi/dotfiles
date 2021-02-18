@@ -110,14 +110,13 @@ plugins=(
     aws
     zsh-autosuggestions
     helm
-    minikube
+		minikube
     kube-ps1
     docker
     colored-man-pages
     colorize
     pip
     python
-    brew
     osx
     zsh_reload
 )
@@ -158,6 +157,7 @@ alias set-global-git-email="git config --global user.email"
 alias export-aws-credentials='eval $(aws2-wrap --profile ${AWS_PROFILE} --export)'
 alias okta-login='unset AWS_SESSION_TOKEN; unset AWS_ACCESS_KEY_ID; unset AWS_SECRET_ACCESS_KEY; okta-awscli --okta-profile ${AWS_PROFILE} --profile ${AWS_PROFILE}'
 alias show-path="echo $PATH | tr ':' '\n'"
+#alias cat="ccat"
 
 # Python
 # alias python="/usr/bin/python3"
@@ -171,21 +171,11 @@ alias code="/usr/local/bin/code"
 export KUBE_EDITOR="code -w"
 
 # alias to project directory
-alias p="~/Documents/Projects"
+alias p="~/Projects"
 # alias reload="echo 'Sourcing .zshrc ...'; source ~/.zshrc"
 alias reload="restart-shell"
 alias restart-shell="echo 'restarting shell ...'; exec $SHELL"
 alias cls="clear"
-# alias v11sbx="aws-profile v11sandbox; aws-login"
-# alias v11np="aws-profile v11nonprod; aws-login"
-
-#export DEFAULT_USER="hpe_mrusso"
-
-# python cert stuff
-# find /usr/**/*.pem
-# export SSL_CERT_FILE=/usr/local/etc/openssl@1.1/cert.pem
-# export SSL_CERT_FILE=/usr/local/aws-cli/botocore/cacert.pem
-# export REQUESTS_CA_BUNDLE=${SSL_CERT_FILE}
 
 # For iterm2 shell integration
 # curl -L https://iterm2.com/shell_integration/zsh -o ~/.iterm2_shell_integration.zsh
@@ -208,14 +198,16 @@ export PATH="$HOME/.poetry/bin:$PATH"
 # GOPATH
 export PATH="$HOME/go/bin:$PATH"
 
+# Homebrew sbin
+export PATH="/usr/local/sbin:$PATH"
+
 # GPG pin entry
-# see here: https://docs.github.com/en/github/authenticating-to-github/telling-git-about-your-signing-key
-# and also here: https://unix.stackexchange.com/a/608921
+# https://unix.stackexchange.com/a/608921
 export GPG_TTY=$TTY
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/hpe_mrusso/.sdkman"
-[[ -s "/Users/hpe_mrusso/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/hpe_mrusso/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
