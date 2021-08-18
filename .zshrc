@@ -157,7 +157,8 @@ alias set-global-git-email="git config --global user.email"
 alias export-aws-credentials='eval $(aws2-wrap --profile ${AWS_PROFILE} --export)'
 alias okta-login='unset AWS_SESSION_TOKEN; unset AWS_ACCESS_KEY_ID; unset AWS_SECRET_ACCESS_KEY; okta-awscli --okta-profile ${AWS_PROFILE} --profile ${AWS_PROFILE}'
 alias show-path="echo $PATH | tr ':' '\n'"
-#alias cat="ccat"
+alias create-password='openssl rand -base64 12 | pbcopy; echo "Copied to clipboard"'
+alias generate-password='create-password'
 
 # Python
 # alias python="/usr/bin/python3"
@@ -208,6 +209,16 @@ export GPG_TTY=$TTY
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
 
+# openjdk@8
+export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
+export PATH="/usr/local/opt/node@14/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/russomi/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/russomi/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/russomi/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/russomi/google-cloud-sdk/completion.zsh.inc'; fi
